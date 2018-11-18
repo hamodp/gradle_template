@@ -1,0 +1,59 @@
+buildscript {
+    repositories {
+        
+        mavenCentral()
+    }
+}
+
+apply plugin: 'war'
+apply plugin: 'java'
+apply plugin: 'eclipse-wtp'
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    //compile group: 'commons-io', name: 'commons-io', version: '1.4'
+    //compile group: 'log4j', name: 'log4j', version: '1.2.15', ext: 'jar'
+    //providedCompile 'javax.servlet:servlet-api:2.5
+    
+    // provides java ee api
+    compile group: 'javax', name: 'javaee-api', version: '8.0'
+    
+    // JAX-RS 2.0(.1)
+    compile 'javax.ws.rs:javax.ws.rs-api:2.0.1'
+    
+    // includes JPA javax.persistance
+    //compile 'org.hibernate:hibernate-core:5.3.4.Final'
+    
+    // allows conncetion to mysql database
+    //compile 'mysql:mysql-connector-java:8.0.12'
+    
+    //compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.14'
+    //compile 'uk.co.caprica:vlcj:3.10.1'
+    //runtime 'javax.servlet:jstl:1.1.2'
+    
+    //logging for vlcj
+   // compile group: 'org.slf4j', name: 'slf4j-api', version:'1.7.10'
+    //compile group: 'org.slf4j', name: 'slf4j-log4j12', version:'1.7.10'
+    
+}
+
+task taskX(type: Exec, dependsOn: 'build') {
+
+		commandLine 'sh','./deploy.sh'
+}
+
+gretty {
+   httpPort = 8080
+}
+
+//for test vlcj
+//jar {
+//    from{ configurations.compile.collect{ it.isDirectory() ? it : zipTree(it) } }
+//    manifest {
+//        attributes 'Main-Class': 'org.gradle.sample.StreamHttp'
+//    }
+//}
