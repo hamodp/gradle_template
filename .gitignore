@@ -1,10 +1,17 @@
 .gradle
 /build/
+
+#ignore builds and bins from gradle
 **bin
 **build
+
+#ignore settings from eclipse
 **.classpath
 **.project
 **.settings
+
+#ignore js libraries from npm
+**node_modules
 
 # Ignore Gradle GUI config
 gradle-app.setting
