@@ -17,72 +17,15 @@ repositories {
 }
 
 dependencies {
-    //compile group: 'commons-io', name: 'commons-io', version: '1.4'
-    //compile group: 'log4j', name: 'log4j', version: '1.2.15', ext: 'jar'
-    //providedCompile 'javax.servlet:servlet-api:2.5
-    
-    // creates the ejb container with glassfish server
-   // compile "org.glassfish.extras:glassfish-embedded-all:3.1.1"
-   
-   // create the ejb container with jboss server
-  // compile "org.jboss.ejb3.embedded:jboss-ejb3-embedded-standalone:
-   // https://mvnrepository.com/artifact/org.jboss.ejb3.embedded/jboss-ejb3-embedded-api
-//compile group: 'org.jboss.ejb3.embedded', name: 'jboss-ejb3-embedded-api', version: '1.0.0-alpha-4'
-   
-   
-   //compile "org.jboss.ejb3:jboss-ejb3-api:3.1.0"
     
     // provides java ee api
     compile group: 'javax', name: 'javaee-api', version: '8.0'
     
     // provides junit 5 jupiter
-    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
-	compile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.2.0'
-	
-	// https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher
-	compile group: 'org.junit.platform', name: 'junit-platform-launcher', version: '1.2.0'
-	
-	// https://mvnrepository.com/artifact/org.junit.platform/junit-platform-runner
-compile group: 'org.junit.platform', name: 'junit-platform-runner', version: '1.2.0'
-
-// https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
-compile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.2.0'
-
-   compile "org.jboss.arquillian:arquillian-bom:1.1.7.Final"
-   compile "org.jboss.arquillian.junit:arquillian-junit-container:1.4.0.Final"
-   testRuntime 'org.wildfly:wildfly-arquillian-container-embedded:8.2.0.Final' 
-   
-   // https://mvnrepository.com/artifact/org.eclipse.microprofile/microprofile
-//compile group: 'org.eclipse.microprofile', name: 'microprofile', version: '2.0.1', ext: 'pom'
-
-// https://mvnrepository.com/artifact/org.eclipse.microprofile.health/microprofile-health-api
-compile group: 'org.eclipse.microprofile.health', name: 'microprofile-health-api', version: '1.0'
-
-// https://mvnrepository.com/artifact/org.wildfly.swarm/microprofile-health
-compile group: 'org.wildfly.swarm', name: 'microprofile-health', version: '2018.2.0.Final'
-
-// https://mvnrepository.com/artifact/org.wildfly.swarm/monitor
-compile group: 'org.wildfly.swarm', name: 'monitor', version: '2018.5.0'
-
-
-   
-    
-    // JAX-RS 2.0(.1)
-    //compile 'javax.ws.rs:javax.ws.rs-api:2.0.1'
-    
-    // includes JPA javax.persistance
-    //compile 'org.hibernate:hibernate-core:5.3.4.Final'
-    
-    // allows conncetion to mysql database
-    //compile 'mysql:mysql-connector-java:8.0.12'
-    
-    //compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.14'
-    //compile 'uk.co.caprica:vlcj:3.10.1'
-    //runtime 'javax.servlet:jstl:1.1.2'
-    
-    //logging for vlcj
-   // compile group: 'org.slf4j', name: 'slf4j-api', version:'1.7.10'
-    //compile group: 'org.slf4j', name: 'slf4j-log4j12', version:'1.7.10'
+    compile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.2.0'
+    compile group: 'org.junit.platform', name: 'junit-platform-launcher', version: '1.2.0'
+    compile group: 'org.junit.platform', name: 'junit-platform-runner', version: '1.2.0'
+    compile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.2.0'
     
 }
 
